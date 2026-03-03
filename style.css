@@ -1,12 +1,16 @@
 html, body {
   background-color: #232020;
-  min-width: 500px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
   color: #ff7315;
   text-align: center;
-  font-size: 3em;
+  font-size: clamp(1.5rem, 5vw, 3em);
+  margin: 20px 0;
 }
 
 #instructions {
@@ -27,5 +31,36 @@ header {
 }
 
 .fini {
-  background-color : #0c9463;
+ 
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.8em;
+  }
+  
+  .bg-light {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    font-size: 1.5em;
+  }
+  
+  .bg-light {
+    padding: 1.5rem !important;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Ensure container is responsive */
+* {
+  box-sizing: border-box;
+} background-color : #0c9463;
 }
